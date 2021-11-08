@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SearchInputBasic } from "Style/Input";
 
 const HeaderStyled = styled.header`
   display: flex;
@@ -38,11 +39,8 @@ const SearchBox = styled.div`
 `;
 
 const SearchInput = styled.input`
-  border-width: 0px;
-  background-color: transparent;
+  ${SearchInputBasic}
   font-size: 15px;
-  letter-spacing: 0.03em;
-  color: #545454;
   width: 110px;
   line-height: 39px;
 
