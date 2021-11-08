@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SearchInputBasic } from "Style/Input";
+import { SearchInputBasic } from "style/Input";
 
 const HeaderStyled = styled.header`
   display: flex;
