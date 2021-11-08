@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Test } from "components";
+import { Header } from "components";
 import {
   Route,
   Switch,
@@ -16,9 +16,10 @@ class App extends Component {
 
   render() {
     return (
-      <Switch>
-        <Route path="/" component={Test} exact />
-      </Switch>
+      <Header></Header>
+      // <Switch>
+      //   {/* <Route path="/" component={Header} exact /> */}
+      // </Switch>
     );
   }
 }

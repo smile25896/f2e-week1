@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./normalize.css";
 import "./index.css";
-import { App } from "./components/index";
+import { App } from "./components";
 import history from "./history";
 import { Provider } from "react-redux";
 import { Router, Route } from "react-router-dom";
