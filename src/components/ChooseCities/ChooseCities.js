@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { CityCard } from "components";
 import {
-  BackgroundBasic,
+  BackgroundCss,
   HomeTitleBasic,
   HomeSecondTitleBasic,
 } from "style/Basic";
@@ -10,6 +10,7 @@ const ChooseCitiesStyled = styled.div`
   position: relative;
   padding: 0 0 0 219px;
   display: flex;
+  min-height: 443px;
 `;
 
 const BackgroundGray = styled.div`
@@ -23,7 +24,7 @@ const BackgroundGray = styled.div`
 `;
 
 const BackgroundCircle = styled.div`
-  ${BackgroundBasic}
+  ${BackgroundCss}
   background-image: url('/img/deco2.png');
   position: absolute;
   width: 100px;
@@ -33,7 +34,7 @@ const BackgroundCircle = styled.div`
 `;
 
 const BackgroundHiking = styled.div`
-  ${BackgroundBasic}
+  ${BackgroundCss}
   background-image: url('/img/deco1.png');
   position: absolute;
   top: 171px;

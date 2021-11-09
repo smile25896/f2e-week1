@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { MainGradientCss } from "style/Basic";
 
 const CityCardsStyled = styled(Link)`
   width: 123px;
@@ -21,12 +22,13 @@ const CityCardsStyled = styled(Link)`
 `;
 
 const IconBox = styled.div`
+  ${MainGradientCss}
   width: 76px;
   height: 76px;
   left: 485px;
   top: 682px;
   border-radius: 50%;
-  background: linear-gradient(155.4deg, #78e389 0.2%, #1eb893 90.81%);
+
   display: flex;
   justify-content: center;
   align-items: center;

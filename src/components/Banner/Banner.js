@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { SearchInputBasic } from "style/Input";
-import { BackgroundBasic } from "style/Basic";
+import { BackgroundCss } from "style/Basic";
 
 const BannerStyled = styled.div`
-  ${BackgroundBasic}
+  ${BackgroundCss}
   background-image: url("/img/banner.png");
   width: 100%;
   max-height: 500px;
