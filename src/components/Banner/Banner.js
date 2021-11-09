@@ -70,9 +70,14 @@ const SearchButton = styled.button`
   line-height: 22px;
   letter-spacing: 0.03em;
   color: #ffffff;
+  cursor: pointer;
 
   i {
     margin-right: 5px;
+  }
+
+  &:active {
+    transform: translateY(1px);
   }
 `;
 

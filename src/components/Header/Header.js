@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { SearchInputBasic } from "style/Input";
+import { Link } from "react-router-dom";
 
 const HeaderStyled = styled.header`
   display: flex;
@@ -10,10 +11,10 @@ const HeaderStyled = styled.header`
 
 const LogoBox = styled.div``;
 
-const MenuBox = styled.div`
+const MenuBox = styled.ul`
   display: flex;
 `;
-const MenuItem = styled.div`
+const MenuItem = styled.li`
   flex: 1;
   font-size: 15px;
   line-height: 22px;
@@ -63,10 +64,18 @@ function Header() {
         <img src={process.env.PUBLIC_URL + "/img/logo1.png"} />
       </LogoBox>
       <MenuBox>
-        <MenuItem>旅遊景點</MenuItem>
-        <MenuItem>特色活動</MenuItem>
-        <MenuItem>美食饗宴</MenuItem>
-        <MenuItem>精選住宿</MenuItem>
+        <Link to="/">
+          <MenuItem>旅遊景點</MenuItem>
+        </Link>
+        <Link to="/">
+          <MenuItem>特色活動</MenuItem>
+        </Link>
+        <Link to="/">
+          <MenuItem>美食饗宴</MenuItem>
+        </Link>
+        <Link to="/">
+          <MenuItem>精選住宿</MenuItem>
+        </Link>
       </MenuBox>
       <SearchBox>
         <SearchInput placeholder="搜尋關鍵字..." />

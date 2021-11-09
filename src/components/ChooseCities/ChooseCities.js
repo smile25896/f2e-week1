@@ -51,6 +51,7 @@ const HomeTitle = styled(HomeTitleBasic)`
   position: relative;
   padding-top: 127px;
   margin-bottom: 14px;
+  font-weight: 600;
 `;
 
 const HomeSecondTitle = styled(HomeSecondTitleBasic)`
