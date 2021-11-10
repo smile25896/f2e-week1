@@ -11,6 +11,11 @@ export const Card = styled(Link)`
   border-radius: 10px;
 
   margin: 0 17.5px 31px;
+
+  transition: box-shadow 0.3s;
+  &:hover {
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
+  }
 `;
 
 export const CardImg = styled.div`
