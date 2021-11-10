@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { CardWithTag } from "components";
 import {
-  FlexBox,
+  MainContainer,
+  FlexBoxBasic,
   HomeTitleBasic,
   HomeSecondTitleBasic,
   BackgroundCss,
@@ -9,8 +10,8 @@ import {
 } from "style/Basic";
 
 const ActivityStyled = styled.div`
-  position: relative;
-  padding: 44px 103px;
+  ${MainContainer}
+  padding-top: 44px;
 `;
 
 const CardBox = styled.div`
@@ -48,11 +49,11 @@ const BackgroundDeco = styled.div`
 function Activity() {
   return (
     <ActivityStyled>
-      <FlexBox>
+      <FlexBoxBasic>
         <CardBox>
           <CardWithTag />
           <CardWithTag />
-          {/* <CardWithTag /> */}
+          <CardWithTag />
         </CardBox>
         <TitleBox>
           <HomeTitle>
@@ -63,11 +64,11 @@ function Activity() {
           <HomeSecondTitle>Let’s get out</HomeSecondTitle>
           <MoreLinkBasic>更多FUNNY</MoreLinkBasic>
         </TitleBox>
-      </FlexBox>
+      </FlexBoxBasic>
       <CardBox style={{ marginLeft: "111px" }}>
         <CardWithTag />
         <CardWithTag />
-        {/* <CardWithTag /> */}
+        <CardWithTag />
       </CardBox>
       <BackgroundDeco />
     </ActivityStyled>

@@ -64,7 +64,7 @@ const CityCardBox = styled.div`
   flex-wrap: wrap;
   position: relative;
   padding-top: 92px;
-  margin-left: 3%;
+  margin-left: 112px;
 `;
 
 function ChooseCities() {

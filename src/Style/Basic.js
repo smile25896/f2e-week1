@@ -1,6 +1,11 @@
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
+export const MainContainer = css`
+  position: relative;
+  padding: 0 103px;
+`;
+
 export const BackgroundCss = css`
   background-size: cover;
   background-position: center;
@@ -27,7 +32,7 @@ export const HomeSecondTitleBasic = styled.h1`
   color: #9a9a9a;
 `;
 
-export const FlexBox = styled.div`
+export const FlexBoxBasic = styled.div`
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
