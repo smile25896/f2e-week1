@@ -18,6 +18,7 @@ const FoodStyled = styled.div`
 `;
 
 const FlexBox = styled(FlexBoxBasic)`
+  position: relative;
   height: 100%;
 `;
 
@@ -50,15 +51,16 @@ const BackgroundDeco = styled.div`
 `;
 
 const SliderBox = styled.div`
-  position: relative;
-  max-width: calc(100% - 100px);
+  position: absolute;
+  max-width: 100%;
+  overflow: hidden;
   flex: 1;
-  padding-left: 50px;
+  top: 71px;
+  padding-left: 200px;
   overflow: hidden;
 
   .slick-slider {
     max-width: 100%;
-    /* overflow: hidden; */
   }
   .slick-arrow {
     z-index: 99;
@@ -88,6 +90,41 @@ const SliderBox = styled.div`
       display: none;
     }
   }
+
+  .slick-dots {
+    bottom: 20px;
+    left: -203px;
+    text-align: left;
+
+    li {
+      width: 10px;
+      margin: 0 4px;
+
+      button:before {
+        content: "";
+        background-color: #717171;
+        width: 8px;
+        height: 8px;
+        border-radius: 5px;
+        margin-top: 4px;
+        margin-right: 5px;
+      }
+    }
+
+    li.slick-active {
+      width: 32px;
+
+      button:before {
+        content: "";
+        background-color: #1eb893;
+        width: 30px;
+        height: 8px;
+        border-radius: 5px;
+        margin-top: 4px;
+        margin-right: 5px;
+      }
+    }
+  }
 `;
 
 function Food() {
@@ -98,6 +135,7 @@ function Food() {
     slidesToShow: 2,
     slidesToScroll: 2,
     variableWidth: true,
+    dots: true,
   };
   return (
     <FoodStyled>
