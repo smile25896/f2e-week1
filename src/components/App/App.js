@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { Header, Banner, ChooseCities, Activity, Food } from "components";
+import {
+  Header,
+  Banner,
+  ChooseCities,
+  Activity,
+  Food,
+  House,
+} from "components";
 import {
   Route,
   Switch,
@@ -22,6 +29,7 @@ class App extends Component {
         <ChooseCities />
         <Activity />
         <Food />
+        <House />
       </>
       // <Switch>
       //   {/* <Route path="/" component={Header} exact /> */}

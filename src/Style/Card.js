@@ -6,11 +6,13 @@ export const Card = styled(Link)`
   display: block;
   width: 290px;
 
+  overflow: hidden;
+
   background: #ffffff;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
 
-  margin: 0 17.5px 31px;
+  margin: 0 12.5px 31px;
 
   transition: box-shadow 0.3s;
   &:hover {
@@ -71,4 +73,20 @@ export const CardHighlight = styled.div`
   letter-spacing: 0.03em;
 
   color: #0085ff;
+`;
+
+export const CardDollarBox = styled.div`
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 17px;
+  letter-spacing: 0.03em;
+
+  color: #a8a8a8;
+`;
+
+export const CardDollar = styled.span`
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  margin-right: 6px;
 `;
