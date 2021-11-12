@@ -3,21 +3,22 @@ import { Link } from "react-router-dom";
 import { BackgroundCss, FlexBoxBasic } from "style/Basic";
 
 const Card = styled(Link)`
+  position: relative;
   ${BackgroundCss}
-  background-size: unset;
   display: block;
   width: 231px;
   height: 335px;
   border-radius: 10px;
   margin: 0 10px;
   overflow: hidden;
-  background-image: url("/img/food1.png");
-  background-color: #c4c4c4;
+  background-image: url(${(props) => props.imgUrl});
+  /* background-color: #c4c4c4; */
 
   padding: 275px 14px 0;
 `;
 
 const Title = styled.div`
+  position: relative;
   font-weight: 600;
   font-size: 16px;
   line-height: 23px;
@@ -29,6 +30,7 @@ const Title = styled.div`
 `;
 
 const Catalog = styled.div`
+  position: relative;
   font-weight: 600;
   font-size: 12px;
   line-height: 17px;
@@ -38,6 +40,7 @@ const Catalog = styled.div`
 `;
 
 const CityTag = styled.span`
+  position: relative;
   background: #0e0e0e;
   border-radius: 10.5px;
   font-size: 12px;
@@ -48,9 +51,23 @@ const CityTag = styled.span`
   color: #ffffff;
 `;
 
-function FoodCard() {
+const Mask = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 231px;
+  height: 148px;
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0.53) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+`;
+
+function FoodCard({ imgUrl }) {
   return (
-    <Card to="/">
+    <Card to="/" imgUrl={imgUrl}>
+      <Mask />
       <Title>長角96</Title>
       <FlexBoxBasic style={{ justifyContent: "space-between" }}>
         <Catalog>異國料理</Catalog>

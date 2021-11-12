@@ -14,6 +14,7 @@ const FoodStyled = styled.div`
   ${MainContainer}
   margin-top: 108px;
   height: 484px;
+  padding-right: 0;
 `;
 
 const FlexBox = styled(FlexBoxBasic)`
@@ -49,9 +50,44 @@ const BackgroundDeco = styled.div`
 `;
 
 const SliderBox = styled.div`
-  max-width: 100%;
+  position: relative;
+  max-width: calc(100% - 100px);
   flex: 1;
-  margin: 0 -10px;
+  padding-left: 50px;
+  overflow: hidden;
+
+  .slick-slider {
+    max-width: 100%;
+    /* overflow: hidden; */
+  }
+  .slick-arrow {
+    z-index: 99;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+  }
+
+  .slick-prev {
+    background-image: url("/img/btn-left.png");
+    top: 103px;
+    left: -50px;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .slick-next {
+    background-image: url("/img/btn-right.png");
+    top: 253px;
+    right: 50px;
+
+    &:before {
+      display: none;
+    }
+  }
 `;
 
 function Food() {
@@ -59,8 +95,9 @@ function Food() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    variableWidth: true,
   };
   return (
     <FoodStyled>
@@ -73,12 +110,13 @@ function Food() {
         </TitleBox>
         <SliderBox>
           <Slider {...settings}>
-            <FoodCard />
-            <FoodCard />
-            <FoodCard />
-            <FoodCard />
-            <FoodCard />
-            <FoodCard />
+            <FoodCard imgUrl="/img/food1.png" />
+            <FoodCard imgUrl="/img/food2.png" />
+            <FoodCard imgUrl="/img/food1.png" />
+            <FoodCard imgUrl="/img/food1.png" />
+            <FoodCard imgUrl="/img/food2.png" />
+            <FoodCard imgUrl="/img/food1.png" />
+            <FoodCard imgUrl="/img/food2.png" />
           </Slider>
         </SliderBox>
       </FlexBox>
