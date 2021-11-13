@@ -12,14 +12,13 @@ class HomeContainer extends Component {
 
   componentDidMount() {
     let data = {
-      $top: 10,
+      $top: 30,
     };
     this.props.getActivity(data);
   }
 
   render() {
-    console.log(this.props.scenicSpot.activityList);
-    return <Home />;
+    return <Home scenicSpot={this.props.scenicSpot} />;
   }
 }
 

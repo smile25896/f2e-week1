@@ -4,26 +4,40 @@ import {
   CardImg,
   CardInfo,
   CardTitle,
-  CardContent,
+  CardContent as CardContentBasic,
   CardBottomInfo,
   CardTagBox,
   CardTag,
   CardHighlight,
 } from "style/Card";
 
-function CardWithTag() {
+const CardContent = styled(CardContentBasic)`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+function CardWithTag({ data }) {
+  console.log(data);
+  if (!data) return <></>;
   return (
     <Card to="/">
-      <CardImg imgurl="/img/unsplash_SahEnZR5Ni8.png" />
+      <CardImg
+        imgurl={data.Picture?.PictureUrl1 ?? "/img/unsplash_SahEnZR5Ni8.png"}
+      />
       <CardInfo>
-        <CardTitle>2021大溪豆干節</CardTitle>
-        <CardContent>臺北市政府工務局公園路燈工程管理處</CardContent>
+        <CardTitle>{data.Name}</CardTitle>
+        <CardContent>{data.Address || data.Organizer}</CardContent>
         <CardBottomInfo>
           <CardTagBox>
-            <CardTag>年度</CardTag>
-            <CardTag>節慶</CardTag>
+            {data.Class1 != undefined ? <CardTag>{data.Class1}</CardTag> : null}
+            {data.Class2 != undefined ? <CardTag>{data.Class2}</CardTag> : null}
           </CardTagBox>
-          <CardHighlight>桃園市</CardHighlight>
+          <CardHighlight>
+            {data.City ??
+              data.Address?.slice(0, 3) ??
+              data.Organizer?.slice(0, 3)}
+          </CardHighlight>
         </CardBottomInfo>
       </CardInfo>
     </Card>

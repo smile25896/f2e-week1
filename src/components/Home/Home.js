@@ -4,12 +4,12 @@ import { Banner, ChooseCities, Activity, Food, House } from "./index";
 import { connect } from "react-redux";
 // import PropTypes from "prop-types";
 
-function Home(props) {
+function Home({ scenicSpot }) {
   return (
     <>
       <Banner />
       <ChooseCities />
-      <Activity />
+      <Activity list={scenicSpot.activityList} />
       <Food />
       <House />
     </>

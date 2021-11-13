@@ -36,6 +36,9 @@ export const CardTitle = styled.div`
   font-size: 16px;
   line-height: 23px;
   letter-spacing: 0.03em;
+  height: 46px;
+  max-height: 46px;
+  overflow: hidden;
 `;
 
 export const CardContent = styled.div`

@@ -73,14 +73,14 @@ const BackgroundDeco = styled.div`
   z-index: -1;
 `;
 
-function Activity() {
+function Activity({ list }) {
   return (
     <ActivityStyled>
       <FlexBoxBasic>
         <CardBox>
-          <CardWithTag />
-          <CardWithTag />
-          <CardWithTag />
+          <CardWithTag data={list[5]} />
+          <CardWithTag data={list[6]} />
+          <CardWithTag data={list[7]} />
         </CardBox>
         <TitleBox>
           <HomeTitle>
@@ -93,10 +93,10 @@ function Activity() {
         </TitleBox>
       </FlexBoxBasic>
       <CardBox2>
-        <CardWithTag />
-        <CardWithTag />
-        <CardWithTag />
-        <CardWithTag />
+        <CardWithTag data={list[8]} />
+        <CardWithTag data={list[13]} />
+        <CardWithTag data={list[12]} />
+        <CardWithTag data={list[14]} />
       </CardBox2>
       <BackgroundDeco />
     </ActivityStyled>
