@@ -18,7 +18,6 @@ const CardContent = styled(CardContentBasic)`
 `;
 
 function CardWithTag({ data }) {
-  console.log(data);
   if (!data) return <></>;
   return (
     <Card to="/">

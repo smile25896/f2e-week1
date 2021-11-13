@@ -5,12 +5,16 @@ import {
   GET_ACTIVITY,
   GET_ACTIVITY_ERROR,
   GET_ACTIVITY_SUCCESS,
+  GET_RESTAURANT,
+  GET_RESTAURANT_ERROR,
+  GET_RESTAURANT_SUCCESS,
 } from "constant";
 
 const initState = {
   errors: null,
   list: [],
   activityList: [],
+  restaurantList: [],
   isPending: false,
 };
 
@@ -40,6 +44,20 @@ export default function (state = initState, action) {
         activityList: action.payload,
       };
     case GET_ACTIVITY_ERROR:
+      return {
+        ...state,
+        errors: action.payload.errors,
+      };
+    case GET_RESTAURANT:
+      return { ...state, errors: null, isPending: true };
+    case GET_RESTAURANT_SUCCESS:
+      return {
+        ...state,
+        errors: null,
+        isPending: false,
+        restaurantList: action.payload,
+      };
+    case GET_RESTAURANT_ERROR:
       return {
         ...state,
         errors: action.payload.errors,

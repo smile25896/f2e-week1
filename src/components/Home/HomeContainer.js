@@ -3,7 +3,7 @@ import Home from "./Home";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { bindActionCreators } from "redux";
-import { getActivity } from "actions/scenicSpot";
+import { getActivity, getRestaurant } from "actions/scenicSpot";
 
 class HomeContainer extends Component {
   // constructor(props) {
@@ -15,6 +15,7 @@ class HomeContainer extends Component {
       $top: 30,
     };
     this.props.getActivity(data);
+    this.props.getRestaurant(data);
   }
 
   render() {
@@ -33,6 +34,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     getActivity: bindActionCreators(getActivity, dispatch),
+    getRestaurant: bindActionCreators(getRestaurant, dispatch),
   };
 }
 

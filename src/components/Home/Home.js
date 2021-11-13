@@ -10,7 +10,7 @@ function Home({ scenicSpot }) {
       <Banner />
       <ChooseCities />
       <Activity list={scenicSpot.activityList} />
-      <Food />
+      <Food list={scenicSpot.restaurantList} />
       <House />
     </>
   );

@@ -5,6 +5,9 @@ import {
   GET_ACTIVITY,
   GET_ACTIVITY_ERROR,
   GET_ACTIVITY_SUCCESS,
+  GET_RESTAURANT,
+  GET_RESTAURANT_ERROR,
+  GET_RESTAURANT_SUCCESS,
 } from "constant";
 
 export function getScenicSpot(data) {
@@ -47,6 +50,29 @@ export function getActivitySuccess(data) {
 export function getActivityError(errors) {
   return {
     type: GET_ACTIVITY_ERROR,
+    payload: {
+      errors: errors,
+    },
+  };
+}
+
+export function getRestaurant(data) {
+  return {
+    type: GET_RESTAURANT,
+    payload: data,
+  };
+}
+
+export function getRestaurantSuccess(data) {
+  return {
+    type: GET_RESTAURANT_SUCCESS,
+    payload: data,
+  };
+}
+
+export function getRestaurantError(errors) {
+  return {
+    type: GET_RESTAURANT_ERROR,
     payload: {
       errors: errors,
     },

@@ -24,6 +24,10 @@ const Title = styled.div`
   line-height: 23px;
   letter-spacing: 0.03em;
 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   color: #ffffff;
 
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
@@ -64,14 +68,21 @@ const Mask = styled.div`
   );
 `;
 
-function FoodCard({ imgurl }) {
+function FoodCard({ data }) {
   return (
-    <Card to="/" imgurl={imgurl}>
+    <Card
+      to="/"
+      imgurl={data.Picture?.PictureUrl1 ?? "/img/unsplash_SahEnZR5Ni8.png"}
+    >
       <Mask />
-      <Title>長角96</Title>
+      <Title>{data.Name}</Title>
       <FlexBoxBasic style={{ justifyContent: "space-between" }}>
-        <Catalog>異國料理</Catalog>
-        <CityTag>新北市</CityTag>
+        <Catalog>{data.Class}</Catalog>
+        <CityTag>
+          {data.City ??
+            data.Address?.slice(0, 3) ??
+            data.Organizer?.slice(0, 3)}
+        </CityTag>
       </FlexBoxBasic>
     </Card>
   );

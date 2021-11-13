@@ -14,7 +14,7 @@ const FoodStyled = styled.div`
   ${MainContainer}
   margin-top: 108px;
   height: 484px;
-  padding-right: 0;
+  padding-right: 0 !important;
 `;
 
 const FlexBox = styled(FlexBoxBasic)`
@@ -127,7 +127,7 @@ const SliderBox = styled.div`
   }
 `;
 
-function Food() {
+function Food({ list }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -137,6 +137,7 @@ function Food() {
     variableWidth: true,
     dots: true,
   };
+  const foodItems = list.slice(3, 15).map((item) => <FoodCard data={item} />);
   return (
     <FoodStyled>
       <BackgroundDeco />
@@ -147,15 +148,7 @@ function Food() {
           <MoreLinkBasic to="/">更多美味</MoreLinkBasic>
         </TitleBox>
         <SliderBox>
-          <Slider {...settings}>
-            <FoodCard imgurl="/img/food1.png" />
-            <FoodCard imgurl="/img/food2.png" />
-            <FoodCard imgurl="/img/food1.png" />
-            <FoodCard imgurl="/img/food1.png" />
-            <FoodCard imgurl="/img/food2.png" />
-            <FoodCard imgurl="/img/food1.png" />
-            <FoodCard imgurl="/img/food2.png" />
-          </Slider>
+          <Slider {...settings}>{foodItems}</Slider>
         </SliderBox>
       </FlexBox>
     </FoodStyled>
