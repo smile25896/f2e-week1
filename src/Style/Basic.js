@@ -5,10 +5,12 @@ export const MainContainer = css`
   position: relative;
   padding: 0 203px;
   @media (max-width: 1680px) {
-    padding: 0 150px;
+    padding-left: 150px;
+    padding-right: 150px;
   }
   @media (max-width: 1500px) {
-    padding: 0 103px;
+    padding-left: 103px;
+    padding-right: 103px;
   }
   /* @media (max-width: 1440px) {
     padding: 0 103px;

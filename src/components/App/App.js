@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Header, Home } from "components";
+import { Header, Footer, Home } from "components";
 import {
   Route,
   Switch,
@@ -21,6 +21,7 @@ class App extends Component {
         <Switch>
           <Route path="/" component={Home} exact />
         </Switch>
+        <Footer />
       </>
     );
   }
