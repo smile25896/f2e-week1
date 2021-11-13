@@ -8,6 +8,9 @@ import {
   GET_RESTAURANT,
   GET_RESTAURANT_ERROR,
   GET_RESTAURANT_SUCCESS,
+  GET_HOTEL,
+  GET_HOTEL_ERROR,
+  GET_HOTEL_SUCCESS,
 } from "constant";
 
 const initState = {
@@ -15,6 +18,7 @@ const initState = {
   list: [],
   activityList: [],
   restaurantList: [],
+  hotelList: [],
   isPending: false,
 };
 
@@ -58,6 +62,20 @@ export default function (state = initState, action) {
         restaurantList: action.payload,
       };
     case GET_RESTAURANT_ERROR:
+      return {
+        ...state,
+        errors: action.payload.errors,
+      };
+    case GET_HOTEL:
+      return { ...state, errors: null, isPending: true };
+    case GET_HOTEL_SUCCESS:
+      return {
+        ...state,
+        errors: null,
+        isPending: false,
+        hotelList: action.payload,
+      };
+    case GET_HOTEL_ERROR:
       return {
         ...state,
         errors: action.payload.errors,

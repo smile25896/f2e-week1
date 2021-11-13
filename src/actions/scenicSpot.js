@@ -8,6 +8,9 @@ import {
   GET_RESTAURANT,
   GET_RESTAURANT_ERROR,
   GET_RESTAURANT_SUCCESS,
+  GET_HOTEL,
+  GET_HOTEL_ERROR,
+  GET_HOTEL_SUCCESS,
 } from "constant";
 
 export function getScenicSpot(data) {
@@ -73,6 +76,29 @@ export function getRestaurantSuccess(data) {
 export function getRestaurantError(errors) {
   return {
     type: GET_RESTAURANT_ERROR,
+    payload: {
+      errors: errors,
+    },
+  };
+}
+
+export function getHotel(data) {
+  return {
+    type: GET_HOTEL,
+    payload: data,
+  };
+}
+
+export function getHotelSuccess(data) {
+  return {
+    type: GET_HOTEL_SUCCESS,
+    payload: data,
+  };
+}
+
+export function getHotelError(errors) {
+  return {
+    type: GET_HOTEL_ERROR,
     payload: {
       errors: errors,
     },

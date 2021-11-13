@@ -9,7 +9,7 @@ import {
   MoreLinkBasic,
 } from "style/Basic";
 
-const HouseStyled = styled.div`
+const HotelStyled = styled.div`
   ${MainContainer}
   padding-top: 127px;
   padding-bottom: 65px;
@@ -22,6 +22,7 @@ const TitleBox = styled.div`
 const CardBox = styled.div`
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   padding-top: 47px;
 
   & > a:nth-child(2n) {
@@ -44,25 +45,23 @@ const BackgroundDeco = styled.div`
   height: 435px;
 `;
 
-function House() {
+function Hotel({ list }) {
+  const hotelItems = list
+    .slice(2, 6)
+    .map((item) => <CardWithDollar key={item.ID} data={item} />);
   return (
-    <HouseStyled>
+    <HotelStyled>
       <BackgroundDeco />
       <TitleBox>
         <HomeTitleBasic>精選住宿</HomeTitleBasic>
         <HomeSecondTitleBasic>accommodation</HomeSecondTitleBasic>
       </TitleBox>
-      <CardBox>
-        <CardWithDollar />
-        <CardWithDollar />
-        <CardWithDollar />
-        <CardWithDollar />
-      </CardBox>
+      <CardBox>{hotelItems}</CardBox>
       <MoreDiv>
         <MoreLinkBasic to="/">更多住宿</MoreLinkBasic>
       </MoreDiv>
-    </HouseStyled>
+    </HotelStyled>
   );
 }
 
-export default House;
+export default Hotel;

@@ -1,6 +1,6 @@
 import React from "react";
-// import { Banner, ChooseCities, Activity, Food, House } from "components";
-import { Banner, ChooseCities, Activity, Food, House } from "./index";
+// import { Banner, ChooseCities, Activity, Food, Hotel } from "components";
+import { Banner, ChooseCities, Activity, Food, Hotel } from "./index";
 import { connect } from "react-redux";
 // import PropTypes from "prop-types";
 
@@ -11,7 +11,7 @@ function Home({ scenicSpot }) {
       <ChooseCities />
       <Activity list={scenicSpot.activityList} />
       <Food list={scenicSpot.restaurantList} />
-      <House />
+      <Hotel list={scenicSpot.hotelList} />
     </>
   );
 }

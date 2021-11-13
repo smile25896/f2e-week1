@@ -137,7 +137,9 @@ function Food({ list }) {
     variableWidth: true,
     dots: true,
   };
-  const foodItems = list.slice(3, 15).map((item) => <FoodCard data={item} />);
+  const foodItems = list
+    .slice(3, 15)
+    .map((item) => <FoodCard key={item.ID} data={item} />);
   return (
     <FoodStyled>
       <BackgroundDeco />

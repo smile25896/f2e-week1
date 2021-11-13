@@ -3,7 +3,7 @@ import Home from "./Home";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { bindActionCreators } from "redux";
-import { getActivity, getRestaurant } from "actions/scenicSpot";
+import { getActivity, getRestaurant, getHotel } from "actions/scenicSpot";
 
 class HomeContainer extends Component {
   // constructor(props) {
@@ -16,6 +16,7 @@ class HomeContainer extends Component {
     };
     this.props.getActivity(data);
     this.props.getRestaurant(data);
+    this.props.getHotel(data);
   }
 
   render() {
@@ -23,7 +24,12 @@ class HomeContainer extends Component {
   }
 }
 
-HomeContainer.propTypes = {};
+HomeContainer.propTypes = {
+  getActivity: PropTypes.func.isRequired,
+  getHotel: PropTypes.func.isRequired,
+  getRestaurant: PropTypes.func.isRequired,
+  scenicSpot: PropTypes.object.isRequired,
+};
 
 function mapStateToProps(state) {
   return {
@@ -35,6 +41,7 @@ function mapDispatchToProps(dispatch) {
   return {
     getActivity: bindActionCreators(getActivity, dispatch),
     getRestaurant: bindActionCreators(getRestaurant, dispatch),
+    getHotel: bindActionCreators(getHotel, dispatch),
   };
 }
 
