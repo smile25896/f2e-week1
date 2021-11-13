@@ -1,5 +1,9 @@
-// import { fork } from "redux-saga/effects";
+import { fork } from "redux-saga/effects";
 
-// import replyCalendar from "./calendar/replyCalendar";
+import getScenicSpot from "./scenicSpot/getScenicSpot";
+import getActivity from "./scenicSpot/getActivity";
 
-export default function* rootSaga() {}
+export default function* rootSaga() {
+  yield fork(getScenicSpot);
+  yield fork(getActivity);
+}
