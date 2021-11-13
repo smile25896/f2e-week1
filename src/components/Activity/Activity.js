@@ -16,8 +16,34 @@ const ActivityStyled = styled.div`
 
 const CardBox = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin: 0 -12.5px;
+  @media (max-width: 1439px) {
+    & > a:nth-child(3) {
+      display: none;
+    }
+  }
+`;
+
+const CardBox2 = styled(CardBox)`
+  justify-content: flex-end;
+  margin-right: 20px;
+
+  @media (max-width: 1770px) {
+    margin-right: 180px;
+    & > a:nth-child(4) {
+      display: none;
+    }
+  }
+  @media (max-width: 1500px) {
+    /* margin-left: 111px; */
+  }
+  @media (max-width: 1439px) {
+    margin-right: 0px;
+    & > a:nth-child(3) {
+      display: block;
+    }
+  }
 `;
 
 const TitleBox = styled.div`
@@ -44,6 +70,7 @@ const BackgroundDeco = styled.div`
   bottom: -200px;
   width: 291.79px;
   height: 447.46px;
+  z-index: -1;
 `;
 
 function Activity() {
@@ -65,11 +92,12 @@ function Activity() {
           <MoreLinkBasic>更多FUNNY</MoreLinkBasic>
         </TitleBox>
       </FlexBoxBasic>
-      <CardBox style={{ marginLeft: "111px" }}>
+      <CardBox2>
         <CardWithTag />
         <CardWithTag />
         <CardWithTag />
-      </CardBox>
+        <CardWithTag />
+      </CardBox2>
       <BackgroundDeco />
     </ActivityStyled>
   );

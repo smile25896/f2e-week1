@@ -3,7 +3,16 @@ import { Link } from "react-router-dom";
 
 export const MainContainer = css`
   position: relative;
-  padding: 0 103px;
+  padding: 0 203px;
+  @media (max-width: 1680px) {
+    padding: 0 150px;
+  }
+  @media (max-width: 1500px) {
+    padding: 0 103px;
+  }
+  /* @media (max-width: 1440px) {
+    padding: 0 103px;
+  } */
 `;
 
 export const BackgroundCss = css`
