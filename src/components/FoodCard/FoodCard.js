@@ -11,7 +11,7 @@ const Card = styled(Link)`
   border-radius: 10px;
   margin: 0 10px;
   overflow: hidden;
-  background-image: url(${(props) => props.imgUrl});
+  background-image: url(${(props) => props.imgurl});
   /* background-color: #c4c4c4; */
 
   padding: 275px 14px 0;
@@ -64,9 +64,9 @@ const Mask = styled.div`
   );
 `;
 
-function FoodCard({ imgUrl }) {
+function FoodCard({ imgurl }) {
   return (
-    <Card to="/" imgUrl={imgUrl}>
+    <Card to="/" imgurl={imgurl}>
       <Mask />
       <Title>長角96</Title>
       <FlexBoxBasic style={{ justifyContent: "space-between" }}>

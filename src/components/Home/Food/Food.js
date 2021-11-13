@@ -144,17 +144,17 @@ function Food() {
         <TitleBox>
           <HomeTitle>餐飲美食</HomeTitle>
           <HomeSecondTitle>tasty</HomeSecondTitle>
-          <MoreLinkBasic>更多美味</MoreLinkBasic>
+          <MoreLinkBasic to="/">更多美味</MoreLinkBasic>
         </TitleBox>
         <SliderBox>
           <Slider {...settings}>
-            <FoodCard imgUrl="/img/food1.png" />
-            <FoodCard imgUrl="/img/food2.png" />
-            <FoodCard imgUrl="/img/food1.png" />
-            <FoodCard imgUrl="/img/food1.png" />
-            <FoodCard imgUrl="/img/food2.png" />
-            <FoodCard imgUrl="/img/food1.png" />
-            <FoodCard imgUrl="/img/food2.png" />
+            <FoodCard imgurl="/img/food1.png" />
+            <FoodCard imgurl="/img/food2.png" />
+            <FoodCard imgurl="/img/food1.png" />
+            <FoodCard imgurl="/img/food1.png" />
+            <FoodCard imgurl="/img/food2.png" />
+            <FoodCard imgurl="/img/food1.png" />
+            <FoodCard imgurl="/img/food2.png" />
           </Slider>
         </SliderBox>
       </FlexBox>

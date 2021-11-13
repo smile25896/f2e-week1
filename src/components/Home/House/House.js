@@ -59,7 +59,7 @@ function House() {
         <CardWithDollar />
       </CardBox>
       <MoreDiv>
-        <MoreLinkBasic>更多住宿</MoreLinkBasic>
+        <MoreLinkBasic to="/">更多住宿</MoreLinkBasic>
       </MoreDiv>
     </HouseStyled>
   );

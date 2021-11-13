@@ -22,7 +22,7 @@ export const Card = styled(Link)`
 
 export const CardImg = styled.div`
   ${BackgroundCss}
-  background-image: url(${(props) => props.imgUrl});
+  background-image: url(${(props) => props.imgurl});
   height: 243px;
   width: 100%;
 `;

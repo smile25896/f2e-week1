@@ -14,7 +14,7 @@ import {
 function CardWithTag() {
   return (
     <Card to="/">
-      <CardImg imgUrl="/img/unsplash_SahEnZR5Ni8.png" />
+      <CardImg imgurl="/img/unsplash_SahEnZR5Ni8.png" />
       <CardInfo>
         <CardTitle>2021大溪豆干節</CardTitle>
         <CardContent>臺北市政府工務局公園路燈工程管理處</CardContent>

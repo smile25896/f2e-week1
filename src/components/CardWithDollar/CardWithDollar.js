@@ -14,7 +14,7 @@ import {
 function CardWithDollar() {
   return (
     <Card to="/">
-      <CardImg imgUrl="/img/unsplash_SahEnZR5Ni8.png" />
+      <CardImg imgurl="/img/unsplash_SahEnZR5Ni8.png" />
       <CardInfo>
         <CardTitle>洛碁大飯店忠孝館</CardTitle>
         <CardContent>國際觀光旅館</CardContent>

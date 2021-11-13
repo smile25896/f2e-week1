@@ -89,7 +89,7 @@ function Activity() {
             出門走走了呢？
           </HomeTitle>
           <HomeSecondTitle>Let’s get out</HomeSecondTitle>
-          <MoreLinkBasic>更多FUNNY</MoreLinkBasic>
+          <MoreLinkBasic to="/">更多FUNNY</MoreLinkBasic>
         </TitleBox>
       </FlexBoxBasic>
       <CardBox2>
