@@ -13,6 +13,10 @@ const HotelStyled = styled.div`
   ${MainContainer}
   padding-top: 127px;
   padding-bottom: 65px;
+
+  @media (max-width: 576px) {
+    padding-top: 49px;
+  }
 `;
 
 const TitleBox = styled.div`
@@ -25,8 +29,23 @@ const CardBox = styled.div`
   justify-content: center;
   padding-top: 47px;
 
+  @media (max-width: 576px) {
+    padding-top: 31px;
+  }
+
   & > a:nth-child(2n) {
     margin-top: 30px;
+  }
+
+  @media (max-width: 1240px) {
+    flex-wrap: wrap;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  @media (max-width: 1036px) {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 `;
 

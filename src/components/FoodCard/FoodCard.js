@@ -15,6 +15,12 @@ const Card = styled(Link)`
   /* background-color: #c4c4c4; */
 
   padding: 275px 14px 0;
+
+  @media (max-width: 576px) {
+    width: 123px;
+    height: 178px;
+    padding-top: 130px;
+  }
 `;
 
 const Title = styled.div`
@@ -31,6 +37,12 @@ const Title = styled.div`
   color: #ffffff;
 
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 3px;
+  }
 `;
 
 const Catalog = styled.div`
@@ -41,6 +53,11 @@ const Catalog = styled.div`
   letter-spacing: 0.03em;
 
   color: #e4e4e4;
+
+  @media (max-width: 576px) {
+    font-size: 10px;
+    line-height: 14px;
+  }
 `;
 
 const CityTag = styled.span`
@@ -53,6 +70,12 @@ const CityTag = styled.span`
   padding: 1px 8px;
 
   color: #ffffff;
+
+  @media (max-width: 576px) {
+    font-size: 10px;
+    line-height: 14px;
+    padding: 1px 5px;
+  }
 `;
 
 const Mask = styled.div`

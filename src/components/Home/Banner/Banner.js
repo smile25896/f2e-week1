@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { SearchInputBasic } from "style/Input";
-import { BackgroundCss } from "style/Basic";
+import { BackgroundCss, MainContainer } from "style/Basic";
 
 const BannerStyled = styled.div`
   ${BackgroundCss}
+  ${MainContainer}
   background-image: url("/img/banner.png");
   width: 100%;
   max-height: 500px;
@@ -46,6 +47,10 @@ const SearchBox = styled.div`
   border: 6px solid #e7e7e7;
   box-sizing: border-box;
   border-radius: 79px;
+
+  @media (max-width: 1023px) {
+    width: auto;
+  }
 `;
 
 const SearchInput = styled.input`

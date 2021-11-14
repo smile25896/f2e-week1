@@ -4,13 +4,34 @@ import {
   BackgroundCss,
   HomeTitleBasic,
   HomeSecondTitleBasic,
+  MainContainer,
 } from "style/Basic";
 
 const ChooseCitiesStyled = styled.div`
   position: relative;
-  padding: 0 0 0 219px;
+  padding-left: 219px;
   display: flex;
   min-height: 443px;
+
+  @media (max-width: 1440px) {
+    padding-right: 350px;
+  }
+
+  @media (max-width: 1290px) {
+    padding-right: 200px;
+  }
+
+  @media (max-width: 1140px) {
+    padding-right: 50px;
+  }
+
+  @media (max-width: 1023px) {
+    ${MainContainer}
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding-bottom: 35px;
+  }
 `;
 
 const BackgroundGray = styled.div`
@@ -46,12 +67,16 @@ const BackgroundHiking = styled.div`
 const TitleBox = styled.div`
   width: 135px;
   min-width: 135px;
+  padding-top: 127px;
+
+  @media (max-width: 1023px) {
+    padding-top: 47px;
+    text-align: center;
+  }
 `;
 
 const HomeTitle = styled(HomeTitleBasic)`
   position: relative;
-  padding-top: 127px;
-  margin-bottom: 14px;
   font-weight: 600;
 `;
 
@@ -65,14 +90,30 @@ const CityCardBox = styled.div`
   position: relative;
   padding-top: 92px;
   margin-left: 112px;
+
+  @media (max-width: 1023px) {
+    margin-left: 0;
+    padding-top: 18px;
+    justify-content: center;
+  }
+
+  @media (max-width: 853px) and (min-width: 671px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media (max-width: 670px) and (min-width: 600px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 `;
 
 function ChooseCities() {
   return (
     <ChooseCitiesStyled>
-      <BackgroundGray />
-      <BackgroundCircle />
-      <BackgroundHiking />
+      <BackgroundGray className="only-pc" />
+      <BackgroundCircle className="only-pc" />
+      <BackgroundHiking className="only-pc" />
       <TitleBox>
         <HomeTitle>縣市快選</HomeTitle>
         <HomeSecondTitle>Choose Cities</HomeSecondTitle>
@@ -83,6 +124,7 @@ function ChooseCities() {
         <CityCard text="南部" imgNum="3" />
         <CityCard text="東部" imgNum="4" />
         <CityCard text="離島" imgNum="5" />
+        <CityCard />
       </CityCardBox>
     </ChooseCitiesStyled>
   );

@@ -15,11 +15,19 @@ const FoodStyled = styled.div`
   margin-top: 108px;
   height: 484px;
   padding-right: 0 !important;
+
+  @media (max-width: 576px) {
+    margin-top: 49px;
+    height: auto;
+  }
 `;
 
 const FlexBox = styled(FlexBoxBasic)`
   position: relative;
   height: 100%;
+  @media (max-width: 1223px) {
+    flex-direction: column;
+  }
 `;
 
 const TitleBox = styled.div`
@@ -27,6 +35,10 @@ const TitleBox = styled.div`
   padding-bottom: 109px;
   margin-left: 53px; */
   min-width: 150px;
+  @media (max-width: 1223px) {
+    min-width: auto;
+    text-align: center;
+  }
 `;
 
 const HomeTitle = styled(HomeTitleBasic)`
@@ -59,9 +71,17 @@ const SliderBox = styled.div`
   padding-left: 200px;
   overflow: hidden;
 
+  @media (max-width: 1223px) {
+    position: relative;
+    padding-left: 0;
+    top: 0px;
+    margin-top: 31px;
+  }
+
   .slick-slider {
     max-width: 100%;
   }
+
   .slick-arrow {
     z-index: 99;
     background-position: center;
@@ -125,6 +145,13 @@ const SliderBox = styled.div`
       }
     }
   }
+
+  @media (max-width: 1223px) {
+    .slick-arrow,
+    .slick-dots {
+      display: none !important;
+    }
+  }
 `;
 
 function Food({ list }) {
@@ -142,16 +169,21 @@ function Food({ list }) {
     .map((item) => <FoodCard key={item.ID} data={item} />);
   return (
     <FoodStyled>
-      <BackgroundDeco />
+      <BackgroundDeco className="only-pc" />
       <FlexBox>
         <TitleBox>
           <HomeTitle>餐飲美食</HomeTitle>
           <HomeSecondTitle>tasty</HomeSecondTitle>
-          <MoreLinkBasic to="/">更多美味</MoreLinkBasic>
+          <MoreLinkBasic className="only-pc" to="/">
+            更多美味
+          </MoreLinkBasic>
         </TitleBox>
         <SliderBox>
           <Slider {...settings}>{foodItems}</Slider>
         </SliderBox>
+        <MoreLinkBasic className="only-tablet" to="/">
+          更多美味
+        </MoreLinkBasic>
       </FlexBox>
     </FoodStyled>
   );

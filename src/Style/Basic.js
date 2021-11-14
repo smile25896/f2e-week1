@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 export const MainContainer = css`
   position: relative;
-  padding: 0 203px;
+  padding-left: 203px;
+  padding-right: 203px;
   @media (max-width: 1680px) {
     padding-left: 150px;
     padding-right: 150px;
@@ -12,9 +13,10 @@ export const MainContainer = css`
     padding-left: 103px;
     padding-right: 103px;
   }
-  /* @media (max-width: 1440px) {
-    padding: 0 103px;
-  } */
+  @media (max-width: 1023px) {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
 `;
 
 export const BackgroundCss = css`
@@ -31,6 +33,15 @@ export const HomeTitleBasic = styled.h1`
   margin-bottom: 14px;
 
   color: #000000;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 4px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 20px;
+    line-height: 29px;
+  }
 `;
 
 export const HomeSecondTitleBasic = styled.h1`
@@ -41,6 +52,10 @@ export const HomeSecondTitleBasic = styled.h1`
   text-transform: uppercase;
 
   color: #9a9a9a;
+  @media (max-width: 576px) {
+    font-size: 10px;
+    line-height: 12px;
+  }
 `;
 
 export const FlexBoxBasic = styled.div`
@@ -65,6 +80,10 @@ export const MoreLinkBasic = styled(Link)`
   line-height: 20px;
   letter-spacing: 0.03em;
   color: #ffffff;
+
+  @media (max-width: 576px) {
+    margin-top: 34px;
+  }
 
   &:before {
     content: "";
