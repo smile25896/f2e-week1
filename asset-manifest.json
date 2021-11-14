@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/soonshow/f2e-week1/static/css/main.7f3f935c.chunk.css",
+    "main.js": "/soonshow/f2e-week1/static/js/main.4ee128e1.chunk.js",
+    "main.js.map": "/soonshow/f2e-week1/static/js/main.4ee128e1.chunk.js.map",
+    "runtime-main.js": "/soonshow/f2e-week1/static/js/runtime-main.5a5d3bc2.js",
+    "runtime-main.js.map": "/soonshow/f2e-week1/static/js/runtime-main.5a5d3bc2.js.map",
+    "static/css/2.18bc66da.chunk.css": "/soonshow/f2e-week1/static/css/2.18bc66da.chunk.css",
+    "static/js/2.0117a295.chunk.js": "/soonshow/f2e-week1/static/js/2.0117a295.chunk.js",
+    "static/js/2.0117a295.chunk.js.map": "/soonshow/f2e-week1/static/js/2.0117a295.chunk.js.map",
+    "index.html": "/soonshow/f2e-week1/index.html",
+    "static/css/2.18bc66da.chunk.css.map": "/soonshow/f2e-week1/static/css/2.18bc66da.chunk.css.map",
+    "static/css/main.7f3f935c.chunk.css.map": "/soonshow/f2e-week1/static/css/main.7f3f935c.chunk.css.map",
+    "static/js/2.0117a295.chunk.js.LICENSE.txt": "/soonshow/f2e-week1/static/js/2.0117a295.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/soonshow/f2e-week1/static/media/fontawesome-webfont.f691f37e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5a5d3bc2.js",
+    "static/css/2.18bc66da.chunk.css",
+    "static/js/2.0117a295.chunk.js",
+    "static/css/main.7f3f935c.chunk.css",
+    "static/js/main.4ee128e1.chunk.js"
+  ]
+}
